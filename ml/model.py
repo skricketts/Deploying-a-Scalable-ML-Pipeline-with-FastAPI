@@ -22,7 +22,12 @@ def train_model(X_train, y_train):
         Trained machine learning model.
     """
     # TODO: implement the function
-    model = LogisticRegression(max_iter=1000)
+    model = LogisticRegression(
+        max_iter=2000, 
+        solver = "liblinear",
+        penalty = "l2",
+        random_state = 42,
+        C = 0.5)
     model.fit(X_train, y_train)
     return model
 
