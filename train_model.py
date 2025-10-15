@@ -75,7 +75,7 @@ preds = inference(model, X_test)
 p, r, fb = compute_model_metrics(y_test, preds)
 print(f"Precision: {p:.4f} | Recall: {r:.4f} | F1: {fb:.4f}")
 
-# TODO: compute the performance on model slices using the performance_on_categorical_slice function
+# compute the performance on model slices using the performance_on_categorical_slice function
 # iterate through the categorical features
 for col in cat_features:
     # iterate through the unique values in one categorical feature
